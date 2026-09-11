@@ -1,0 +1,1266 @@
+Quiero que desarrolles únicamente el FRONTEND / UX/UI de una aplicación web llamada provisionalmente:
+
+“Plataforma de Gestión Comercial”
+
+IMPORTANTE:
+En esta etapa NO quiero backend.
+NO quiero Supabase.
+NO quiero PostgreSQL.
+NO quiero autenticación real.
+NO quiero RLS.
+NO quiero APIs.
+NO quiero persistencia real.
+NO quiero lógica de negocio conectada a base de datos.
+
+Quiero primero construir y validar toda la EXPERIENCIA VISUAL, NAVEGACIÓN Y UX/UI de la plataforma.
+
+Utiliza datos MOCK realistas para representar estadísticas, usuarios, productos, clientes, demostraciones y ventas.
+
+STACK FRONTEND:
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Lucide React
+- Componentes reutilizables
+- Diseño responsive
+- Mobile First
+
+PRINCIPAL OBJETIVO:
+
+Crear una interfaz moderna, profesional, limpia y premium, pensada principalmente para utilizarse desde el celular durante demostraciones comerciales, pero totalmente responsive para tablet, notebook y desktop.
+
+La experiencia debe combinar:
+
+- CRM
+- Dashboard empresarial
+- Catálogo estilo e-commerce
+- Calculadora de ventas
+- Gestión comercial
+- Gestión de red de vendedores
+
+COLOR PRINCIPAL DE MARCA:
+
+#0066B3
+
+Usar #0066B3 como color principal de identidad.
+
+Paleta complementaria sugerida:
+
+- Primary: #0066B3
+- Dark: #0B1F33
+- Background: #F5F7FA
+- White: #FFFFFF
+- Text: #172033
+- Muted: #667085
+- Success: #16A34A
+- Warning: #F59E0B
+- Danger: #DC2626
+- Border: #E4E7EC
+
+No sobrecargar la interfaz con colores.
+
+La aplicación debe sentirse como un producto SaaS comercial profesional.
+
+==================================================
+
+1. # ESTRUCTURA GENERAL
+
+La aplicación tendrá 3 roles:
+
+1. ADMINISTRADOR
+2. DISTRIBUIDOR
+3. VENDEDOR
+
+Cada rol tendrá su propio dashboard y navegación.
+
+La interfaz debe demostrar visualmente que los permisos son diferentes.
+
+No quiero solamente cambiar el nombre del usuario.
+Cada rol debe tener una experiencia y menú apropiados.
+
+================================================== 2. ADMINISTRADOR
+==================================================
+
+El administrador tiene una visión global de toda la plataforma.
+
+Dashboard principal:
+
+Título:
+
+“Dashboard General”
+
+Subtítulo:
+
+“Resumen de toda la operación comercial”
+
+Debe mostrar:
+
+- Total de distribuciones
+- Total de vendedores
+- Demostraciones del período
+- Ventas del período
+- No ventas
+- Cancelaciones
+- Tasa de cierre
+- Postventas
+- Facturación
+
+Agregar selector de período:
+
+[Hoy] [Semana] [Mes] [Año]
+
+Agregar filtro:
+
+[Todos los distribuidores ▼]
+
+También permitir seleccionar un distribuidor específico.
+
+El administrador debe poder navegar:
+
+Dashboard
+Distribuidores
+Usuarios
+Productos
+Categorías
+Calculadora
+Clientes
+Demostraciones
+Ventas
+Postventas
+Estadísticas
+Muro de ventas
+Financiación
+Configuración
+
+================================================== 3. DASHBOARD ADMINISTRADOR
+==================================================
+
+Diseñar un dashboard visual con:
+
+Fila de KPIs:
+
+- Distribuciones
+- Vendedores
+- Demostraciones
+- Ventas
+- Tasa de cierre
+
+Después:
+
+GRÁFICO 1:
+“Demostraciones”
+
+Mostrar:
+
+- Agendadas
+- Concretadas
+- Canceladas
+
+GRÁFICO 2:
+“Resultado de demostraciones”
+
+- Venta
+- No venta
+
+GRÁFICO 3:
+“Ventas por distribución”
+
+Lista o gráfico de barras.
+
+GRÁFICO 4:
+“Actividad de la red”
+
+Comparar distribuidores.
+
+Agregar una sección:
+
+“Top Distribuidores”
+
+Ejemplo:
+
+1. 78328 — Clover Group
+2. 79421 — Grupo Norte
+3. 81231 — Team Premium
+
+Mostrar:
+
+- Demostraciones
+- Ventas
+- Conversión
+
+Después:
+
+“Top Vendedores”
+
+Mostrar:
+
+- Código vendedor
+- Nombre
+- Distribución
+- Demostraciones
+- Ventas
+- Conversión
+
+================================================== 4. ADMINISTRADOR — DISTRIBUIDORES
+==================================================
+
+Crear pantalla:
+
+“Distribuidores”
+
+Tabla/cards con:
+
+- Número de distribución
+- Nombre
+- Distribuidor superior
+- Cantidad de vendedores
+- Cantidad de distribuidores descendientes
+- Ventas
+- Demostraciones
+- Estado
+
+Ejemplo:
+
+78328
+Clover Group
+
+Estado:
+Activo
+
+Botón:
+
+“Ver distribución”
+
+Al entrar:
+
+“78328 — Clover Group”
+
+Mostrar:
+
+Resumen de estadísticas.
+
+Árbol de red:
+
+Distribuidor
+↓
+Distribuidores descendientes
+↓
+Vendedores
+
+La estructura debe ser visualmente clara.
+
+================================================== 5. ADMINISTRADOR — USUARIOS
+==================================================
+
+Pantalla:
+
+“Usuarios”
+
+Debe tener:
+
+Buscador
+
+Filtros:
+
+- Todos
+- Administrador
+- Distribuidor
+- Vendedor
+- Activo
+- Inactivo
+
+Tabla:
+
+Nombre
+Código
+Rol
+Distribución
+Estado
+Acciones
+
+Acciones:
+
+Ver
+Editar
+Cambiar rol
+Activar
+Desactivar
+
+Agregar botón:
+
+“Crear usuario”
+
+================================================== 6. ADMINISTRADOR — PRODUCTOS
+==================================================
+
+Crear interfaz administrativa para productos.
+
+Mostrar:
+
+- Imagen
+- Producto
+- Código
+- Categoría
+- Precio Córdoba
+- Precio Patagonia
+- Estado
+
+Botones:
+
+Nuevo producto
+Editar
+Activar/desactivar
+
+================================================== 7. ADMINISTRADOR — CATEGORÍAS
+==================================================
+
+Pantalla para gestionar las 10 categorías.
+
+Debe permitir visualmente:
+
+- Crear categoría
+- Editar
+- Activar/desactivar
+- Ordenar categorías
+
+================================================== 8. ADMINISTRADOR — FINANCIACIÓN
+==================================================
+
+Crear una pantalla:
+
+“Configuración de financiación”
+
+Mostrar:
+
+TNA
+TEA
+
+Luego tabla:
+
+Cuotas | Coeficiente | Estado
+
+2
+3
+4
+5
+6
+...
+24
+
+Cada fila debe tener input editable.
+
+Agregar botón:
+
+“Guardar cambios”
+
+Debe verse como una configuración empresarial importante.
+
+================================================== 9. DISTRIBUIDOR
+==================================================
+
+Ahora crear una experiencia diferente para el rol:
+
+DISTRIBUIDOR
+
+Ejemplo:
+
+78328
+Clover Group
+
+Dashboard:
+
+“Hola, Clover Group”
+
+Separar visualmente en dos grandes bloques:
+
+=================================
+MI ACTIVIDAD
+=================================
+
+Lo que hizo personalmente.
+
+KPIs:
+
+- Demostraciones
+- Ventas
+- No ventas
+- Cancelaciones
+- Postventas
+- Facturación
+
+Filtros:
+
+Hoy
+Semana
+Mes
+Año
+
+Mostrar también:
+
+“Historial completo”
+
+=================================
+MI ORGANIZACIÓN
+=================================
+
+Mostrar:
+
+- Total de personas
+- Distribuidores
+- Vendedores
+- Demostraciones
+- Ventas
+- No ventas
+- Cancelaciones
+- Postventas
+- Facturación
+
+Agregar:
+
+“Actividad de mi red”
+
+Y ranking.
+
+================================================== 10. DISTRIBUIDOR — NAVEGACIÓN
+==================================================
+
+Menú:
+
+Inicio
+Mi Red
+Catálogo
+Calculadora
+Clientes
+Demostraciones
+Ventas
+Postventas
+Estadísticas
+Muro de ventas
+Invitar vendedor
+Mi perfil
+
+En desktop usar sidebar.
+
+En móvil usar navegación inferior + menú adicional.
+
+================================================== 11. DISTRIBUIDOR — MI RED
+==================================================
+
+Esta pantalla es MUY IMPORTANTE.
+
+Título:
+
+“Mi Red”
+
+Mostrar resumen:
+
+Total de red
+Distribuidores
+Vendedores
+Demostraciones
+Ventas
+
+Después crear visualización jerárquica.
+
+Ejemplo:
+
+78328 — Clover Group
+
+├── VILJ0583 — Juan
+├── ABCD1234 — Martín
+└── 81231 — Nueva Distribución
+├── VILJ9999
+└── VILJ8888
+
+Debe poder hacer click.
+
+Flujo:
+
+Mi Red
+→ Distribución
+→ Vendedores
+→ Estadísticas
+
+Al seleccionar una distribución mostrar:
+
+- Demostraciones
+- Ventas
+- No ventas
+- Canceladas
+- Postventas
+- Conversión
+
+Al seleccionar vendedor mostrar:
+
+- Demostraciones
+- Ventas
+- No ventas
+- Canceladas
+- Postventas
+- Conversión
+- Actividad
+
+NO mostrar en esta vista la información privada completa del cliente.
+
+================================================== 12. DISTRIBUIDOR — ESTADÍSTICAS
+==================================================
+
+Debe tener filtros:
+
+Hoy
+Semana
+Mes
+Año
+
+Mostrar:
+
+Demostraciones
+Ventas
+No ventas
+Cancelaciones
+Postventas
+Facturación
+Conversión
+
+Debe permitir comparar:
+
+“Mi actividad”
+
+vs
+
+“Actividad de mi organización”
+
+El concepto visual debe ser:
+
+“Lo que hice yo”
+vs.
+“Lo que está haciendo mi organización”
+
+================================================== 13. DISTRIBUIDOR — MURO DE VENTAS
+==================================================
+
+Crear muro de ventas en vivo visualmente.
+
+NO mostrar precios.
+
+Ejemplo:
+
+🔥 Nueva venta
+
+VILJ0583
+Juan
+
+Juego Premium
+
+Hace 2 minutos
+
+Otra:
+
+🔥 Nueva venta
+
+VILJ8888
+María
+
+Set de cocina
+
+Hace 5 minutos
+
+Usar tarjetas y pequeños indicadores de tiempo.
+
+Simular tiempo real con datos mock.
+
+================================================== 14. VENDEDOR
+==================================================
+
+Crear una experiencia simplificada para el vendedor.
+
+Código:
+
+VILJ0583
+
+Dashboard:
+
+“Hola, Juan”
+
+Mostrar:
+
+MIS ESTADÍSTICAS
+
+- Demostraciones
+- Ventas
+- No ventas
+- Canceladas
+- Tasa de cierre
+- Postventas
+
+Filtro:
+
+Hoy
+Semana
+Mes
+Año
+
+Luego:
+
+“Mi agenda”
+
+Mostrar:
+
+- Demostraciones agendadas
+- Demostraciones pendientes
+- Postventas agendadas
+
+Luego:
+
+“Actividad reciente”
+
+================================================== 15. VENDEDOR — NAVEGACIÓN
+==================================================
+
+Menú móvil prioritario:
+
+Inicio
+Catálogo
+Calculadora
+CRM
+Ventas
+
+Menú adicional:
+
+Demostraciones
+Postventas
+Historial
+Mi perfil
+
+================================================== 16. VENDEDOR — CATÁLOGO
+==================================================
+
+Esta pantalla debe tener aspecto de E-COMMERCE.
+
+MUY IMPORTANTE.
+
+Debe ser visual, atractiva y fácil de utilizar durante una demostración con un cliente.
+
+Título:
+
+“Catálogo”
+
+Arriba:
+
+Selector:
+
+Lista de precio
+[ Córdoba ▼ ]
+
+Opciones:
+
+- Córdoba
+- Patagonia
+
+El selector debe visualmente parecer una preferencia del dispositivo.
+
+Agregar:
+
+Buscador:
+
+“Buscar producto...”
+
+Luego categorías:
+
+[Todos]
+[Categoría 1]
+[Categoría 2]
+[Categoría 3]
+...
+[Categoría 10]
+
+Crear tarjetas de productos:
+
+Imagen
+Producto
+Código
+Detalle
+Precio
+
+Botón:
+
+“Agregar”
+
+Cada producto debe tener una vista de detalle.
+
+================================================== 17. VENDEDOR — DETALLE PRODUCTO
+==================================================
+
+Pantalla:
+
+Imagen grande
+
+Nombre
+Código
+Detalle
+Precio
+
+Botón principal:
+
+“Agregar a venta”
+
+Después:
+
+“Continuar”
+
+Esto debe llevar a la calculadora.
+
+Flujo:
+
+Catálogo
+→ Producto
+→ Agregar
+→ Calculadora
+
+================================================== 18. VENDEDOR — CALCULADORA
+==================================================
+
+Diseñar como una experiencia de checkout/e-commerce.
+
+Mostrar:
+
+PRODUCTOS
+
+Producto A x1
+Producto B x2
+
+Subtotal
+
+ANTICIPO
+
+Input:
+
+$ ****\_\_****
+
+Mostrar:
+
+Anticipo mínimo:
+10%
+
+Saldo a financiar
+
+TIPO DE VENTA
+
+[ Contado ]
+[ Financiado ]
+
+Si es contado:
+
+Mostrar:
+
+Total final
+
+Botón:
+
+“Registrar venta”
+
+Si es financiado:
+
+Mostrar:
+
+Cuotas:
+
+[2]
+[3]
+[4]
+...
+[24]
+
+Cuando se selecciona una cuota:
+
+mostrar:
+
+Saldo
+Coeficiente
+Interés
+Total financiado
+Valor de cuota
+
+Diseñarlo de manera muy clara.
+
+================================================== 19. VENDEDOR — CRM
+==================================================
+
+El CRM debe ser simple.
+
+Título:
+
+“CRM”
+
+Botón principal:
+
+“+ Nueva demostración”
+
+Mostrar tarjetas:
+
+Demostraciones de hoy
+Ventas
+No ventas
+Canceladas
+Postventas
+
+Agregar filtros:
+
+Hoy
+Semana
+Mes
+Año
+
+================================================== 20. NUEVA DEMOSTRACIÓN
+==================================================
+
+Formulario visual:
+
+Cliente
+
+Nombre
+Teléfono
+Empleo
+Dirección
+Referido de
+Potencial
+Comentarios
+
+Potencial:
+
+Alto
+Medio
+Bajo
+
+Fecha
+
+Hora
+
+Productos demostrados
+
+Resultado:
+
+Agendada
+Cancelada
+Concretada
+
+Si es concretada:
+
+Venta
+No venta
+
+Botón:
+
+“Guardar demostración”
+
+================================================== 21. CLIENTES
+==================================================
+
+Crear pantalla:
+
+“Mis Clientes”
+
+Buscador.
+
+Cards o tabla responsive.
+
+Mostrar:
+
+Nombre
+Teléfono
+Empleo
+Potencial
+Última actividad
+
+Al entrar:
+
+Ficha del cliente.
+
+Mostrar:
+
+Información
+Demostraciones
+Compras
+Postventas
+Historial
+
+Agregar botón:
+
+“Agregar postventa”
+
+================================================== 22. CLIENTE DUPLICADO
+==================================================
+
+Crear estado visual cuando el vendedor ingresa un teléfono existente.
+
+Mostrar:
+
+“Este cliente ya existe en tu historial”
+
+Botones:
+
+“Ver cliente”
+
+“Agregar postventa”
+
+No bloquear completamente al usuario.
+
+================================================== 23. POSTVENTA
+==================================================
+
+Pantalla:
+
+“Postventas”
+
+Filtros:
+
+Hoy
+Semana
+Mes
+Año
+
+Mostrar:
+
+Postventas agendadas
+Postventas realizadas
+Postventas con venta
+Postventas sin venta
+
+Crear botón:
+
+“+ Nueva postventa”
+
+================================================== 24. VENTAS
+==================================================
+
+Pantalla:
+
+“Mis ventas”
+
+Filtros:
+
+Hoy
+Semana
+Mes
+Año
+
+Cards:
+
+Venta
+Cliente
+Fecha
+Tipo:
+Contado / Financiado
+
+Importe
+
+Al entrar al detalle:
+
+Productos
+Lista de precio utilizada
+Precios
+Anticipo
+Cuotas
+Coeficiente
+Total
+Fecha
+
+================================================== 25. FACTURACIÓN DEL VENDEDOR
+==================================================
+
+El vendedor podrá consultar:
+
+“Facturación mensual”
+
+Mostrar:
+
+Mes actual
+Mes anterior
+Meses anteriores
+
+Gráfico simple.
+
+Ejemplo:
+
+Agosto 2026
+$4.500.000
+
+Julio 2026
+$3.800.000
+
+================================================== 26. ASCENSO A DISTRIBUIDOR
+==================================================
+
+Crear UI para el momento en que un vendedor pasa a distribuidor.
+
+Mostrar pantalla especial:
+
+🎉
+“¡Felicitaciones por tu logro!”
+
+Texto:
+
+“Ahora formas parte de la estructura de distribuidores.”
+
+Formulario:
+
+Número de distribución
+[____________]
+
+Nombre de distribución
+[____________]
+
+Botón:
+
+“Crear mi distribución”
+
+Después mostrar:
+
+“78328 — Clover Group”
+
+Y activar visualmente las funciones de distribuidor.
+
+================================================== 27. INVITAR VENDEDORES
+==================================================
+
+Pantalla:
+
+“Invitar vendedor”
+
+Dos opciones:
+
+[ Generar enlace ]
+
+[ Generar código QR ]
+
+Mostrar:
+
+Código de invitación
+
+Fecha de creación
+
+Expira en:
+2 días
+
+Estado:
+Activo
+
+La interfaz debe mostrar claramente que la invitación es única.
+
+================================================== 28. RESPONSIVE
+==================================================
+
+La aplicación debe diseñarse MOBILE FIRST.
+
+EN CELULAR:
+
+Usar navegación inferior para las acciones más importantes.
+
+Ejemplo:
+
+Inicio
+Catálogo
+Calculadora
+CRM
+Más
+
+En DESKTOP:
+
+Sidebar lateral.
+
+Header superior.
+
+Contenido central.
+
+Los dashboards deben aprovechar correctamente pantallas grandes.
+
+No hacer simplemente una versión de escritorio reducida en móvil.
+
+================================================== 29. COMPONENTES REUTILIZABLES
+==================================================
+
+Crear componentes reutilizables:
+
+- Sidebar
+- MobileBottomNav
+- Header
+- KPI Card
+- Stat Card
+- Chart Card
+- Product Card
+- Product Grid
+- Search Input
+- Filter Pills
+- Date Filter
+- User Avatar
+- User Card
+- Network Tree
+- Sales Feed
+- Customer Card
+- Demo Card
+- Sale Card
+- PostSale Card
+- Modal
+- Drawer
+- Form Input
+- Select
+- Empty State
+- Loading State
+- Badge
+- Toast
+- Confirmation Dialog
+
+================================================== 30. ESTADOS UX
+==================================================
+
+Agregar estados visuales para:
+
+- Loading
+- Empty
+- Error
+- Success
+- Disabled
+- Active
+- Warning
+- Confirmación
+
+Ejemplo:
+
+“No hay demostraciones registradas en este período.”
+
+================================================== 31. EXPERIENCIA VISUAL
+==================================================
+
+Evitar una interfaz genérica.
+
+Quiero:
+
+- Mucho espacio en blanco.
+- Cards limpias.
+- Jerarquía visual fuerte.
+- Tipografía moderna.
+- Iconografía consistente.
+- Bordes suaves.
+- Sombras muy sutiles.
+- Excelente uso de #0066B3.
+- Animaciones discretas.
+- Hover states.
+- Transiciones suaves.
+- Excelente experiencia táctil en móvil.
+
+NO usar:
+
+- Gradientes exagerados.
+- Interfaces saturadas.
+- Demasiados colores.
+- Efectos visuales innecesarios.
+- Diseño antiguo tipo ERP.
+- Tablas imposibles de usar desde celular.
+
+================================================== 32. DATOS MOCK
+==================================================
+
+Crear datos mock realistas para demostrar toda la aplicación.
+
+Usar ejemplos como:
+
+Distribuidor:
+
+78328 — Clover Group
+
+Vendedores:
+
+VILJ0583
+VILJ0421
+VILM0392
+
+Productos:
+
+CO4654
+CO3821
+CO5210
+
+Crear suficientes datos para que los gráficos y dashboards parezcan una aplicación real.
+
+================================================== 33. ESTRUCTURA DE DESARROLLO
+==================================================
+
+Quiero que primero construyas:
+
+1. Layout global
+2. Navegación
+3. Sistema visual
+4. Dashboard Administrador
+5. Dashboard Distribuidor
+6. Dashboard Vendedor
+7. Catálogo
+8. Calculadora
+9. CRM
+10. Clientes
+11. Demostraciones
+12. Ventas
+13. Postventas
+14. Red
+15. Administración
+16. Responsive
+17. Estados UX
+
+TODAVÍA NO IMPLEMENTAR BACKEND.
+
+Toda la información debe salir de archivos mock/locales para poder validar visualmente.
+
+================================================== 34. REGLA IMPORTANTE
+==================================================
+
+NO intentes construir todavía la lógica real de Supabase.
+
+No crear tablas reales.
+
+No crear autenticación.
+
+No crear RLS.
+
+No conectar APIs.
+
+No hacer persistencia.
+
+Primero quiero aprobar completamente:
+
+- UX
+- UI
+- navegación
+- jerarquía
+- dashboards
+- responsive
+- experiencia del catálogo
+- calculadora visual
+- CRM
+- estructura de los tres roles
+
+Una vez aprobado el frontend, posteriormente se conectará Supabase.
+
+================================================== 35. ENTREGA
+==================================================
+
+Quiero que desarrolles el frontend completo y navegable.
+
+Todas las pantallas principales deben poder abrirse desde la interfaz.
+
+Los botones pueden utilizar datos mock.
+
+No dejar páginas principales vacías.
+
+La app debe poder recorrerse como si ya fuera el producto final.
+
+Antes de escribir mucho código, analiza la arquitectura del frontend y crea una estructura clara y escalable de carpetas y componentes.
+
+Prioriza reutilización de componentes y consistencia visual.
+
+Empieza por el frontend y por los tres roles:
+
+ADMINISTRADOR
+DISTRIBUIDOR
+VENDEDOR
+
+No agregues funcionalidades fuera de este alcance.
